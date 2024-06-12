@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    service: vanilla-py-web
+    app: vanilla-py-web
+  name: vanilla-py-web
+spec:
+  ports:
+  - port: 5000 # container
+    protocol: TCP
+    targetPort: 5000 # host
+  selector:
+    service: vanilla-py-web
+    app: vanilla-py-web
+status: {}
+

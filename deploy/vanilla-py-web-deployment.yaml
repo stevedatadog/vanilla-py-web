@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vanilla-py-web-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: vanilla-py-web
+  template:
+    metadata:
+      labels:
+        app: vanilla-py-web
+    spec: 
+      containers:
+      - name: vanilla-py-web
+        image: ghcr.io/stevedatadog/vanillapy-web:latest
+
