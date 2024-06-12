@@ -10,8 +10,10 @@ spec:
   - port: 9000 # host
     protocol: TCP
     targetPort: 5000 # container
+    nodePort: 30001 # node
   selector:
     service: vanilla-py-web
     app: vanilla-py-web
+  type: NodePort
 status: {}
 
